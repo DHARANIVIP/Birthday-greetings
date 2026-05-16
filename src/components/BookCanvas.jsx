@@ -29,7 +29,7 @@ const BookCanvas = ({ active, setActive }) => {
                 <div className="card1">
                     <div className="cover-text-wrapper">
                         <h4 className="username">
-                            Dear Dharshini<span className="underline"></span>
+                            Dear Hime<span className="underline"></span>
                         </h4>
                         <h3 className="cover-title">
                             Happy Birthday!
@@ -68,11 +68,10 @@ const BookCanvas = ({ active, setActive }) => {
 
                         {/* Swapping back to H2 to match the original CSS targeting */}
                         <div className="card2-message-text italic">
-                            <article style={{ marginBottom: '8px' }}>Happy Birthday, Dharshini ❤️</article>
-                            <article style={{ marginBottom: '10px' }}>From the moment we met, something in my life shifted—like the universe quietly guiding me toward someone meant for me.You brought warmth into the parts of me I didn’t even know were cold, And you expanded my days with a dimension I can only call my own.</article>
-                            <article style={{ marginBottom: '10px' }}>On your birthday, I just want you to know this: I want you with me in every chapter, every storm, every sunshine, every tomorrow. No matter what comes, I’ll be on your side—always. I’ll choose you, protect you, stand with you, and love you in ways that remind you you’re never alone.</article>
-                            <article style={{ marginBottom: '10px' }}>You’re not just another year older today… <br />
-                                you’re the reason my life feels softer, brighter, and endlessly worth living. Happy Birthday.</article>
+                            <article style={{ marginBottom: '8px' }}>Happy Birthday, Hime ❤️</article>
+                            <article style={{ marginBottom: '10px' }}>From the moment we became friends, my life has been so much brighter. You've been there through everything, bringing laughter and support whenever I needed it.</article>
+                            <article style={{ marginBottom: '10px' }}>On your 19th birthday, I want you to know how much I value our friendship. I'm so lucky to have you in my life, and I'm excited for all the adventures we'll have in the year ahead.</article>
+                            <article style={{ marginBottom: '10px' }}>You're an incredible person, and you deserve all the happiness in the world today and always. Happy Birthday!</article>
                         </div>
 
                         <div className="card2-decoration"></div> {/* Decoration */}
