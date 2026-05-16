@@ -90,7 +90,7 @@ const BookCanvas = ({ active, setActive }) => {
                         <div className="confetti-dots"></div>
 
                         <p className="signature">
-                            Your Best Friend, Rexon
+                            Your Best Friend, Dharani
                         </p>
                     </div>
                 </div>

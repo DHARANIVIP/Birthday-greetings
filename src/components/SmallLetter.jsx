@@ -78,7 +78,7 @@ const SmallLetter = () => {
         >
             x
         </div>
-        <p>Hey Hime!<br /><br />Just wanted to drop a quick note to wish you the happiest 19th birthday! You're an awesome friend and I'm so glad we know each other. Hope your day is as great as you are! <br /><br />Rexon</p>
+        <p>Hey Hime!<br /><br />Just wanted to drop a quick note to wish you the happiest 19th birthday! You're an awesome friend and I'm so glad we know each other. Hope your day is as great as you are! <br /><br />Dharani</p>
     </div>
 
     {/* --- NEW SVG DIARY PAGE DECORATION --- */}

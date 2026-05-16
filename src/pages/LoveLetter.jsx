@@ -4,42 +4,42 @@ const LoveLetter = () => {
     const lettersData = [
         {
             id: 1,
-            name: "Rexon",
+            name: "Dharani",
             msg: "Happy birthday to my amazing friend! Wishing you a day filled with joy and laughter.",
         },
         {
             id: 2,
-            name: "Rexon",
+            name: "Dharani",
             msg: "To the person who makes every day better—happy 19th birthday, Hime!",
         },
         {
             id: 3,
-            name: "Rexon",
+            name: "Dharani",
             msg: "Our friendship is the best gift I've ever received. Cheers to you on your special day!",
         },
         {
             id: 4,
-            name: "Rexon",
+            name: "Dharani",
             msg: "Distance can't stop us from celebrating. Happy birthday to my best friend!",
         },
         {
             id: 5,
-            name: "Rexon",
+            name: "Dharani",
             msg: "So grateful for all the laughs and memories we've shared. Have a blast today!",
         },
         {
             id: 6,
-            name: "Rexon",
+            name: "Dharani",
             msg: "You're more than just a friend; you're family. Happy birthday, buddy!",
         },
         {
             id: 7,
-            name: "Rexon",
+            name: "Dharani",
             msg: "May your 19th year be as wonderful and bright as you are. Keep shining!",
         },
         {
             id: 8,
-            name: "Rexon",
+            name: "Dharani",
             msg: "Here's to many more years of friendship and fun. Happy birthday, Hime!",
         },
     ];
