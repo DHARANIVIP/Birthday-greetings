@@ -6,8 +6,10 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Layout from './layout/Layout'
 import Home from './pages/Home'
 import LoveLetter from './pages/LoveLetter'
+import Memories from './pages/Memories'
 import Test from './pages/Test'
 import OpeningAnimation from './components/OpeningAnimation'
+import CountdownPortal from './components/CountdownPortal'
 
 const App = () => {
 
@@ -16,43 +18,38 @@ const App = () => {
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />}></Route>
         <Route path='love-Letter' element={<LoveLetter />}></Route>
+        <Route path='memories' element={<Memories />}></Route>
         <Route path='test' element={<Test />}></Route>
       </Route>
     </Route>
   ))
 
-
-  // ------------------Cake loader 
-  const [loading, setLoading] = useState(true);
+  const [isLocked, setIsLocked] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [showContent, setShowContent] = useState(false);
-  const [animateOut, setAnimateOut] = useState(false); // New state for animation
+  const [animateOut, setAnimateOut] = useState(false);
 
-  useEffect(() => {
-    const handlePageLoad = () => {
-      setTimeout(() => setAnimateOut(true), 8400);
-      setTimeout(() => setLoading(false), 9000);
-      setTimeout(() => setShowContent(true), 8600);
-    };
-
-    if (document.readyState === "complete") {
-      handlePageLoad();
-    } else {
-      window.addEventListener("load", handlePageLoad);
-    }
-
-    return () => window.removeEventListener("load", handlePageLoad);
-  }, []);
+  const startSurpriseFlow = () => {
+    setIsLocked(false);
+    setLoading(true);
+    setTimeout(() => setAnimateOut(true), 8400);
+    setTimeout(() => setLoading(false), 9000);
+    setTimeout(() => setShowContent(true), 8600);
+  };
 
   return (
     <>
       {
-        loading && <OpeningAnimation animateOut={animateOut}/>
+        isLocked && <CountdownPortal onUnlock={startSurpriseFlow} />
       }
       {
-        showContent && <RouterProvider router={MyRoute} />
+        !isLocked && loading && <OpeningAnimation animateOut={animateOut}/>
+      }
+      {
+        !isLocked && showContent && <RouterProvider router={MyRoute} />
       }
     </>
   )
 }
 
-export default App
+export default App

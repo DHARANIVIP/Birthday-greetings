@@ -1,15 +1,24 @@
-import React, { useEffect, useRef } from 'react'
-
+import React, { useEffect, useRef, useState } from 'react'
 import { GiCrossMark } from 'react-icons/gi'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+
+const PHOTOS = [
+    { src: '/dh2.jpeg', caption: 'Dharani & Hime 💖' },
+    { src: '/dh3.jpeg', caption: 'Childhood Memories 🎒' },
+    { src: '/dh4.jpeg', caption: 'Precious Friends ✨' },
+    { src: '/dh12.jpeg', caption: 'Happy Birthday! 🎂' }
+];
 
 const BookCanvas = ({ active, setActive }) => {
-
+    const [currentIdx, setCurrentIdx] = useState(0);
     const dropdownRef = useRef(null)
+
     const handleClickOutside = (event) => {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
             setActive(true)
         }
     }
+
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside)
         return () => {
@@ -17,6 +26,15 @@ const BookCanvas = ({ active, setActive }) => {
         }
     }, [])
 
+    const nextPhoto = (e) => {
+        e.stopPropagation();
+        setCurrentIdx((prev) => (prev + 1) % PHOTOS.length);
+    };
+
+    const prevPhoto = (e) => {
+        e.stopPropagation();
+        setCurrentIdx((prev) => (prev - 1 + PHOTOS.length) % PHOTOS.length);
+    };
 
     return (
         <div className={`boxMail ${active ? 'hidden opacity-0 pointer-events-none' : 'opacity-100 visible'}`}>
@@ -39,9 +57,45 @@ const BookCanvas = ({ active, setActive }) => {
                         </p>
                     </div>
 
-                    {/* User Image remains the same */}
-                    <div className="userImg">
-                        <img src="/img1.jpg" alt="Recipient's Photo" />
+                    {/* Interactive Polaroid Scrapbook */}
+                    <div className="userImg relative flex flex-col items-center justify-start group">
+                        {/* Navigation Arrows */}
+                        <button 
+                            type="button"
+                            onClick={prevPhoto}
+                            className="absolute -left-11 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-pink-100 text-pink-500 border border-pink-200 w-8 h-8 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <FaChevronLeft size={12} />
+                        </button>
+                        
+                        <img 
+                            src={PHOTOS[currentIdx].src} 
+                            alt={PHOTOS[currentIdx].caption} 
+                        />
+                        
+                        <span className="font-dancingScript text-pink-600 font-bold mt-2 text-center text-sm select-none tracking-wide">
+                            {PHOTOS[currentIdx].caption}
+                        </span>
+
+                        <button 
+                            type="button"
+                            onClick={nextPhoto}
+                            className="absolute -right-11 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-pink-100 text-pink-500 border border-pink-200 w-8 h-8 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <FaChevronRight size={12} />
+                        </button>
+                    </div>
+
+                    {/* Dot Indicators */}
+                    <div className="flex gap-1.5 mb-5 z-10">
+                        {PHOTOS.map((_, i) => (
+                            <span 
+                                key={i} 
+                                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentIdx ? 'bg-pink-500 scale-110' : 'bg-pink-200'}`}
+                            />
+                        ))}
                     </div>
 
                     {/* New Hello Kitty themed decoration */}
@@ -51,11 +105,11 @@ const BookCanvas = ({ active, setActive }) => {
                     <div className="card1-decoration-sparkle"></div>
 
                     <svg className="deco-shape top-right-star" viewBox="0 0 100 100">
-                        <polygon points="50,0 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" fill="rgba(255, 255, 255, 0.6)" /> {/* Slightly more opaque */}
+                        <polygon points="50,0 61,35 98,35 68,57 79,91 50,70 21,91 32,57 2,35 39,35" fill="rgba(255, 255, 255, 0.6)" />
                     </svg>
 
                     <svg className="deco-shape bottom-left-ring" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="45" stroke="rgba(255, 255, 255, 0.7)" strokeWidth="5" fill="none" /> {/* Slightly more opaque */}
+                        <circle cx="50" cy="50" r="45" stroke="rgba(255, 255, 255, 0.7)" strokeWidth="5" fill="none" />
                         <circle cx="50" cy="50" r="20" fill="rgba(255, 255, 255, 0.3)" />
                     </svg>
                 </div>
@@ -66,7 +120,6 @@ const BookCanvas = ({ active, setActive }) => {
                             To You!
                         </h3>
 
-                        {/* Swapping back to H2 to match the original CSS targeting */}
                         <div className="card2-message-text italic">
                             <article style={{ marginBottom: '8px' }}>Happy Birthday, Hime ❤️</article>
                             <article style={{ marginBottom: '10px' }}>From the moment we became friends, my life has been so much brighter. You've been there through everything, bringing laughter and support whenever I needed it.</article>
@@ -74,7 +127,7 @@ const BookCanvas = ({ active, setActive }) => {
                             <article style={{ marginBottom: '10px' }}>You're an incredible person, and you deserve all the happiness in the world today and always. Happy Birthday!</article>
                         </div>
 
-                        <div className="card2-decoration"></div> {/* Decoration */}
+                        <div className="card2-decoration"></div>
 
                         <div className="corner-ribbon top-left">
                             <svg className='w-13 h-13 absolute -top-5 -rotate-50 -left-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
