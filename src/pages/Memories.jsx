@@ -3,22 +3,22 @@ import { Link } from 'react-router'
 import { GiCrossMark } from 'react-icons/gi'
 
 const MEMORIES = [
-    { src: '/dh1.jpeg', caption: 'Sweet Friends 🌸', rotate: '-rotate-3', fit: 'object-contain bg-white' },
-    { src: '/dh2.jpeg', caption: 'Dharani & Hime 💖', rotate: 'rotate-2', fit: 'object-cover object-top' },
-    { src: '/dh3.jpeg', caption: 'School Days 🎒', rotate: '-rotate-2', fit: 'object-cover object-top' },
-    { src: '/dh4.jpeg', caption: 'Precious Group ✨', rotate: 'rotate-3', fit: 'object-contain bg-white' },
-    { src: '/dh5.jpeg', caption: 'Beautiful Smile 🌟', rotate: '-rotate-1', fit: 'object-cover object-top' },
-    { src: '/dh6.jpeg', caption: 'Precious Moments 💕', rotate: 'rotate-3', fit: 'object-cover object-top' },
-    { src: '/dh7.jpeg', caption: 'Joy & Laughter 🧸', rotate: '-rotate-3', fit: 'object-cover object-top' },
-    { src: '/dh8.jpeg', caption: 'Shared Memories 🎀', rotate: 'rotate-2', fit: 'object-cover object-top' },
-    { src: '/dh9.jpeg', caption: 'Sweet Times 🍬', rotate: '-rotate-2', fit: 'object-cover object-top' },
-    { src: '/dh10.jpeg', caption: 'Together Always 🌷', rotate: 'rotate-1', fit: 'object-cover object-top' },
-    { src: '/dh11.jpeg', caption: 'Birthday Fun! 🎂', rotate: '-rotate-3', fit: 'object-cover object-top' },
-    { src: '/dh12.jpeg', caption: 'Best Friends 🌸', rotate: 'rotate-2', fit: 'object-cover object-top' },
-    { src: '/dh13.jpeg', caption: 'Shining Bright 🌟', rotate: '-rotate-1', fit: 'object-cover object-top' },
-    { src: '/dh14.jpeg', caption: 'Precious Family 💖', rotate: 'rotate-3', fit: 'object-cover object-top' },
-    { src: '/dh15.jpeg', caption: 'Little Hime 🎒', rotate: '-rotate-2', fit: 'object-cover object-top' },
-    { src: '/dh16.png', caption: 'Life at 8:41 AM 🌸', rotate: 'rotate-1', fit: 'object-cover object-top' }
+    { src: '/dh1.jpeg', caption: 'Sweet Friends 🌸', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 20%' },
+    { src: '/dh2.jpeg', caption: 'Dharani & Hime 💖', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 10%' },
+    { src: '/dh3.jpeg', caption: 'School Days 🎒', rotate: '-rotate-2', objectFit: 'cover', objectPosition: 'center 30%' },
+    { src: '/dh4.jpeg', caption: 'Precious Group ✨', rotate: 'rotate-3', objectFit: 'contain', objectPosition: 'center' },
+    { src: '/dh5.jpeg', caption: 'Beautiful Smile 🌟', rotate: '-rotate-1', objectFit: 'cover', objectPosition: 'center 15%' },
+    { src: '/dh6.jpeg', caption: 'Precious Moments 💕', rotate: 'rotate-3', objectFit: 'cover', objectPosition: 'center 15%' },
+    { src: '/dh7.jpeg', caption: 'Joy & Laughter 🧸', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 35%' },
+    { src: '/dh8.jpeg', caption: 'Shared Memories 🎀', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 30%' },
+    { src: '/dh9.jpeg', caption: 'Sweet Times 🍬', rotate: '-rotate-2', objectFit: 'cover', objectPosition: '25% center' },
+    { src: '/dh10.jpeg', caption: 'Together Always 🌷', rotate: 'rotate-1', objectFit: 'cover', objectPosition: 'center 20%' },
+    { src: '/dh11.jpeg', caption: 'Birthday Fun! 🎂', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 25%' },
+    { src: '/dh12.jpeg', caption: 'Best Friends 🌸', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 15%' },
+    { src: '/dh13.jpeg', caption: 'Shining Bright 🌟', rotate: '-rotate-1', objectFit: 'cover', objectPosition: 'center 35%' },
+    { src: '/dh14.jpeg', caption: 'Precious Family 💖', rotate: 'rotate-3', objectFit: 'cover', objectPosition: 'center 25%' },
+    { src: '/dh15.jpeg', caption: 'Little Hime 🎒', rotate: '-rotate-2', objectFit: 'cover', objectPosition: 'center 35%' },
+    { src: '/dh16.png', caption: 'Life at 8:41 AM 🌸', rotate: 'rotate-1', objectFit: 'cover', objectPosition: 'center 25%' }
 ];
 
 const Memories = () => {
@@ -39,7 +39,7 @@ const Memories = () => {
             </Link>
 
             {/* Title Header */}
-            <h1 className="font-coiny text-[#8B0000] text-3xl md:text-5xl mt-0 mb-14 text-center uppercase tracking-widest"
+            <h1 className="font-coiny text-[#8B0000] text-3xl md:text-5xl mt-8 md:mt-12 mb-14 text-center uppercase tracking-widest"
                 style={{ textShadow: '3px 3px 0px rgba(255, 255, 255, 0.8), 5px 5px 0px rgba(139, 0, 0, 0.05)' }}>
                 🌸 Hime's Memories Wall 🌸
             </h1>
@@ -55,7 +55,11 @@ const Memories = () => {
                         <img 
                             src={m.src} 
                             alt={m.caption} 
-                            className={`w-full h-[140px] md:h-[165px] rounded-md border border-gray-200/50 ${m.fit}`}
+                            className="w-full h-[140px] md:h-[165px] rounded-md border border-gray-200/50 bg-transparent"
+                            style={{
+                                objectFit: m.objectFit,
+                                objectPosition: m.objectPosition
+                            }}
                         />
                         <span className="font-dancingScript text-pink-600 font-bold text-xl md:text-2xl mt-4 text-center tracking-wide">
                             {m.caption}
