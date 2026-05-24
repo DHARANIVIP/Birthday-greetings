@@ -101,7 +101,7 @@ body {
     transition: all .5s ease-in-out;
 }
 
-#FromDharani, #MemoriesWallBtn {
+#FromDharani, #MemoriesWallBtn, #GiftsBtn {
     margin-top: 30px;
     background-color: var(--color-text-pink);
     outline: none;
@@ -133,14 +133,14 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#FromDharani:hover, #MemoriesWallBtn:hover {
+#FromDharani:hover, #MemoriesWallBtn:hover, #GiftsBtn:hover {
     border-color: var(--color-heart);
     background-color: var(--color-heart);
     color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#FromDharani:hover svg, #MemoriesWallBtn:hover svg {
+#FromDharani:hover svg, #MemoriesWallBtn:hover svg, #GiftsBtn:hover svg {
     animation: rotateHeart 1s infinite linear;
 }
 

@@ -7,6 +7,7 @@ import Layout from './layout/Layout'
 import Home from './pages/Home'
 import LoveLetter from './pages/LoveLetter'
 import Memories from './pages/Memories'
+import Gifts from './pages/Gifts'
 import Test from './pages/Test'
 import OpeningAnimation from './components/OpeningAnimation'
 import CountdownPortal from './components/CountdownPortal'
@@ -19,6 +20,7 @@ const App = () => {
         <Route index element={<Home />}></Route>
         <Route path='love-Letter' element={<LoveLetter />}></Route>
         <Route path='memories' element={<Memories />}></Route>
+        <Route path='gifts' element={<Gifts />}></Route>
         <Route path='test' element={<Test />}></Route>
       </Route>
     </Route>

@@ -3,22 +3,22 @@ import { Link } from 'react-router'
 import { GiCrossMark } from 'react-icons/gi'
 
 const MEMORIES = [
-    { src: '/dh1.jpeg', caption: 'Sweet Friends 🌸', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 20%' },
-    { src: '/dh2.jpeg', caption: 'Dharani & Hime 💖', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 10%' },
+    { src: '/dh1.jpeg', caption: 'Brother 💙', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 30%' },
+    { src: '/dh2.jpeg', caption: 'Cute Hime ✨', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 20%' },
     { src: '/dh3.jpeg', caption: 'School Days 🎒', rotate: '-rotate-2', objectFit: 'cover', objectPosition: 'center 30%' },
     { src: '/dh4.jpeg', caption: 'Precious Group ✨', rotate: 'rotate-3', objectFit: 'contain', objectPosition: 'center' },
-    { src: '/dh5.jpeg', caption: 'Beautiful Smile 🌟', rotate: '-rotate-1', objectFit: 'cover', objectPosition: 'center 15%' },
-    { src: '/dh6.jpeg', caption: 'Precious Moments 💕', rotate: 'rotate-3', objectFit: 'cover', objectPosition: 'center 15%' },
-    { src: '/dh7.jpeg', caption: 'Joy & Laughter 🧸', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 35%' },
-    { src: '/dh8.jpeg', caption: 'Shared Memories 🎀', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 30%' },
-    { src: '/dh9.jpeg', caption: 'Sweet Times 🍬', rotate: '-rotate-2', objectFit: 'cover', objectPosition: '25% center' },
-    { src: '/dh10.jpeg', caption: 'Together Always 🌷', rotate: 'rotate-1', objectFit: 'cover', objectPosition: 'center 20%' },
-    { src: '/dh11.jpeg', caption: 'Birthday Fun! 🎂', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 25%' },
-    { src: '/dh12.jpeg', caption: 'Best Friends 🌸', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 15%' },
-    { src: '/dh13.jpeg', caption: 'Shining Bright 🌟', rotate: '-rotate-1', objectFit: 'cover', objectPosition: 'center 35%' },
-    { src: '/dh14.jpeg', caption: 'Precious Family 💖', rotate: 'rotate-3', objectFit: 'cover', objectPosition: 'center 25%' },
+    { src: '/dh5.jpeg', caption: 'Ethnic Grace 🌸', rotate: '-rotate-1', objectFit: 'cover', objectPosition: 'center 15%' },
+    { src: '/dh6.jpeg', caption: 'Baby Brother 🍼', rotate: 'rotate-3', objectFit: 'cover', objectPosition: 'center 15%' },
+    { src: '/dh7.jpeg', caption: "Mother's Love 💖", rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 45%' },
+    { src: '/dh8.jpeg', caption: 'Baby Hime 🎀', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 30%' },
+    { src: '/dh9.jpeg', caption: 'Temple Visit 🛕', rotate: '-rotate-2', objectFit: 'cover', objectPosition: '25% 35%' },
+    { src: '/dh10.jpeg', caption: 'Serene Moments 🌷', rotate: 'rotate-1', objectFit: 'cover', objectPosition: 'center 20%' },
+    { src: '/dh11.jpeg', caption: 'Mirror Selfie 🤳', rotate: '-rotate-3', objectFit: 'cover', objectPosition: 'center 25%' },
+    { src: '/dh12.jpeg', caption: 'Pongal Vibes 🍯', rotate: 'rotate-2', objectFit: 'cover', objectPosition: 'center 15%' },
+    { src: '/dh13.jpeg', caption: 'Elegant Saree 🌟', rotate: '-rotate-1', objectFit: 'cover', objectPosition: 'center 35%' },
+    { src: '/dh14.jpeg', caption: "Grandfather's Blessing 💖", rotate: 'rotate-3', objectFit: 'cover', objectPosition: 'center 30%' },
     { src: '/dh15.jpeg', caption: 'Little Hime 🎒', rotate: '-rotate-2', objectFit: 'cover', objectPosition: 'center 35%' },
-    { src: '/dh16.png', caption: 'Life at 8:41 AM 🌸', rotate: 'rotate-1', objectFit: 'cover', objectPosition: 'center 25%' }
+    { src: '/dh16.png', caption: 'Life at 8:41 AM 🤍', rotate: 'rotate-1', objectFit: 'cover', objectPosition: 'center 25%' }
 ];
 
 const Memories = () => {
